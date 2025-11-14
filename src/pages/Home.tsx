@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 import StatefulCounter from '../components/StatefulCounter'
@@ -23,6 +24,10 @@ const resources = [
 
 const HomePage = () => (
   <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100">
+    <Helmet>
+      <title>hello-codex | ホーム</title>
+      <meta name="description" content="Vite・React・Tailwind CSS を組み合わせたモダンなスターターのホーム画面。" />
+    </Helmet>
     <div className="mx-auto flex max-w-4xl flex-col gap-10 px-4 py-16 md:px-10">
       <header className="flex flex-col items-center gap-6 text-center">
         <div className="flex items-center gap-6">

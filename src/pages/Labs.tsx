@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet-async'
+
 const highlights = [
   {
     title: 'UI パターンライブラリ',
@@ -15,6 +17,10 @@ const highlights = [
 
 const LabsPage = () => (
   <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 text-slate-100">
+    <Helmet>
+      <title>hello-codex | プロトタイピングラボ</title>
+      <meta name="description" content="UI コンポーネントやアルゴリズムを試作するラボページ。" />
+    </Helmet>
     <div className="mx-auto flex max-w-4xl flex-col gap-10 px-4 py-16 md:px-10">
       <header className="space-y-4 text-center">
         <p className="text-xs uppercase tracking-[0.35em] text-cyan-200/80">Labs</p>
