@@ -1,34 +1,121 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const resources = [
+    {
+      title: 'Vite Docs',
+      description: 'Developer experience focused tooling with instant HMR.',
+      link: 'https://vite.dev',
+    },
+    {
+      title: 'React Docs',
+      description: 'Declarative UI primitives for building interactive apps.',
+      link: 'https://react.dev',
+    },
+    {
+      title: 'Tailwind Docs',
+      description: 'Utility-first styling with an expressive design system.',
+      link: 'https://tailwindcss.com',
+    },
+  ]
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100">
+      <div className="mx-auto flex max-w-4xl flex-col gap-10 px-4 py-16 md:px-10">
+        <header className="flex flex-col items-center gap-6 text-center">
+          <div className="flex items-center gap-6">
+            <a
+              href="https://vite.dev"
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-full border border-white/10 bg-white/5 p-4 backdrop-blur transition hover:border-violet-400/60 hover:bg-violet-400/10"
+            >
+              <img
+                src={viteLogo}
+                alt="Vite logo"
+                className="h-16 w-16 transition group-hover:scale-105"
+              />
+            </a>
+            <a
+              href="https://react.dev"
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-full border border-white/10 bg-white/5 p-4 backdrop-blur transition hover:border-cyan-400/60 hover:bg-cyan-400/10"
+            >
+              <img
+                src={reactLogo}
+                alt="React logo"
+                className="h-16 w-16 animate-spin"
+              />
+            </a>
+          </div>
+          <div className="space-y-4">
+            <p className="text-xs uppercase tracking-[0.35em] text-violet-300/70">
+              Vite • React • Tailwind CSS
+            </p>
+            <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
+              A modern starter ready for your next idea
+            </h1>
+            <p className="text-base text-slate-300 md:text-lg">
+              Tailwind CSS is now wired up. Start composing interfaces with
+              expressive utility classes while keeping your components in React.
+            </p>
+          </div>
+        </header>
+
+        <section className="rounded-3xl border border-white/5 bg-white/5 p-8 shadow-2xl shadow-violet-900/30 backdrop-blur">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.35em] text-violet-300/70">
+                Interactive demo
+              </p>
+              <h2 className="text-2xl font-semibold">Stateful counter</h2>
+              <p className="text-sm text-slate-300">
+                Edit <code className="rounded bg-slate-900/60 px-2 py-1">src/App.tsx</code>{' '}
+                to customize this section and see Vite HMR instantly.
+              </p>
+            </div>
+            <div className="flex gap-4">
+              <button
+                type="button"
+                className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:border-violet-300 hover:bg-violet-400/20"
+                onClick={() => setCount((prev) => prev - 1)}
+              >
+                Decrease
+              </button>
+              <button
+                type="button"
+                className="rounded-full border border-violet-300/60 bg-violet-500/80 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/30 transition hover:bg-violet-400"
+                onClick={() => setCount((prev) => prev + 1)}
+              >
+                Increase
+              </button>
+            </div>
+          </div>
+          <div className="mt-8 text-center text-6xl font-bold tracking-tight text-violet-200">
+            {count}
+          </div>
+        </section>
+
+        <section className="grid gap-4 md:grid-cols-3">
+          {resources.map((resource) => (
+            <a
+              key={resource.title}
+              href={resource.link}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:-translate-y-1 hover:border-white/40 hover:bg-white/10"
+            >
+              <h3 className="text-lg font-semibold">{resource.title}</h3>
+              <p className="mt-2 text-sm text-slate-300">{resource.description}</p>
+            </a>
+          ))}
+        </section>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </main>
   )
 }
 
