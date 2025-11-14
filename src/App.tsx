@@ -7,17 +7,17 @@ function App() {
   const resources = [
     {
       title: 'Vite Docs',
-      description: 'Developer experience focused tooling with instant HMR.',
+      description: '即時 HMR を備えた開発者体験重視のツールチェーン。',
       link: 'https://vite.dev',
     },
     {
       title: 'React Docs',
-      description: 'Declarative UI primitives for building interactive apps.',
+      description: 'インタラクティブなアプリを構築するための宣言的な UI プリミティブ。',
       link: 'https://react.dev',
     },
     {
       title: 'Tailwind Docs',
-      description: 'Utility-first styling with an expressive design system.',
+      description: '表現力豊かなデザインシステムを提供するユーティリティファーストなスタイル。',
       link: 'https://tailwindcss.com',
     },
   ]
@@ -54,14 +54,14 @@ function App() {
           </div>
           <div className="space-y-4">
             <p className="text-xs uppercase tracking-[0.35em] text-violet-300/70">
-              Vite • React • Tailwind CSS
+              Vite・React・Tailwind CSS
             </p>
             <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
-              A modern starter ready for your next idea
+              次のアイデアをすぐ形にできるモダンなスターター
             </h1>
             <p className="text-base text-slate-300 md:text-lg">
-              Tailwind CSS is now wired up. Start composing interfaces with
-              expressive utility classes while keeping your components in React.
+              Tailwind CSS のセットアップが完了しました。React コンポーネントのまま、
+              表現力のあるユーティリティクラスでインターフェースを組み立てましょう。
             </p>
           </div>
         </header>
@@ -70,12 +70,12 @@ function App() {
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-sm uppercase tracking-[0.35em] text-violet-300/70">
-                Interactive demo
+                インタラクティブデモ
               </p>
-              <h2 className="text-2xl font-semibold">Stateful counter</h2>
+              <h2 className="text-2xl font-semibold">ステートフルカウンター</h2>
               <p className="text-sm text-slate-300">
-                Edit <code className="rounded bg-slate-900/60 px-2 py-1">src/App.tsx</code>{' '}
-                to customize this section and see Vite HMR instantly.
+                <code className="rounded bg-slate-900/60 px-2 py-1">src/App.tsx</code> を
+                編集してこのセクションをカスタマイズし、Vite の HMR を体感してください。
               </p>
             </div>
             <div className="flex gap-4">
@@ -84,14 +84,14 @@ function App() {
                 className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:border-violet-300 hover:bg-violet-400/20"
                 onClick={() => setCount((prev) => prev - 1)}
               >
-                Decrease
+                減らす
               </button>
               <button
                 type="button"
                 className="rounded-full border border-violet-300/60 bg-violet-500/80 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/30 transition hover:bg-violet-400"
                 onClick={() => setCount((prev) => prev + 1)}
               >
-                Increase
+                増やす
               </button>
             </div>
           </div>
