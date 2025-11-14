@@ -31,7 +31,7 @@ function App() {
               href="https://vite.dev"
               target="_blank"
               rel="noreferrer"
-              className="group rounded-full border border-white/10 bg-white/5 p-4 backdrop-blur transition hover:border-violet-400/60 hover:bg-violet-400/10"
+              className="group rounded-full border border-white/10 bg-white/5 p-4 transition hover:border-violet-400/60 hover:bg-violet-400/10"
             >
               <img
                 src={viteLogo}
@@ -43,7 +43,7 @@ function App() {
               href="https://react.dev"
               target="_blank"
               rel="noreferrer"
-              className="group rounded-full border border-white/10 bg-white/5 p-4 backdrop-blur transition hover:border-cyan-400/60 hover:bg-cyan-400/10"
+              className="group rounded-full border border-white/10 bg-white/5 p-4 transition hover:border-cyan-400/60 hover:bg-cyan-400/10"
             >
               <img
                 src={reactLogo}
@@ -66,7 +66,7 @@ function App() {
           </div>
         </header>
 
-        <section className="rounded-3xl border border-white/5 bg-white/5 p-8 shadow-2xl shadow-violet-900/30 backdrop-blur">
+        <section className="rounded-3xl border border-white/5 bg-white/5 p-8 shadow-2xl shadow-violet-900/30">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-sm uppercase tracking-[0.35em] text-violet-300/70">
@@ -81,7 +81,7 @@ function App() {
             <div className="flex gap-4">
               <button
                 type="button"
-                className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:border-violet-300 hover:bg-violet-400/20 whitespace-nowrap"
+                className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:border-violet-300 hover:bg-violet-400/20 whitespace-nowrap"
                 onClick={() => setCount((prev) => prev - 1)}
               >
                 減らす
