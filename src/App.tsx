@@ -81,14 +81,14 @@ function App() {
             <div className="flex gap-4">
               <button
                 type="button"
-                className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:border-violet-300 hover:bg-violet-400/20"
+                className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:border-violet-300 hover:bg-violet-400/20 whitespace-nowrap"
                 onClick={() => setCount((prev) => prev - 1)}
               >
                 減らす
               </button>
               <button
                 type="button"
-                className="rounded-full border border-violet-300/60 bg-violet-500/80 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/30 transition hover:bg-violet-400"
+                className="rounded-full border border-violet-300/60 bg-violet-500/80 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/30 transition hover:bg-violet-400 whitespace-nowrap"
                 onClick={() => setCount((prev) => prev + 1)}
               >
                 増やす
